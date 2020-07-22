@@ -123,6 +123,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Components\CBaseComponent\CBaseComponent.cpp" />
+    <ClCompile Include="Packages\CBasePackage\CBasePackages.cpp" />
+    <ClCompile Include="main.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Components\CBaseComponent\CBaseComponent.h" />
+    <ClInclude Include="Packages\CBasePackage\CBasePackages.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
