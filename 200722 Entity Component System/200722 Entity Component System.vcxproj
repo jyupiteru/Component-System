@@ -77,9 +77,7 @@
       <SDLCheck>true</SDLCheck>
       <ConformanceMode>true</ConformanceMode>
     </ClCompile>
-    <Link>
-      <SubSystem>Console</SubSystem>
-    </Link>
+    <Link />
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
     <ClCompile>
@@ -123,11 +121,13 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="CObject\CObject.cpp" />
     <ClCompile Include="Components\CBaseComponent\CBaseComponent.cpp" />
     <ClCompile Include="ComponentPackages\CBasePackage\CBasePackages.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="CObject\CObject.h" />
     <ClInclude Include="Components\CBaseComponent\CBaseComponent.h" />
     <ClInclude Include="ComponentPackages\CBasePackage\CBasePackages.h" />
   </ItemGroup>
