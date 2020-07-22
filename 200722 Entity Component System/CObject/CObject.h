@@ -10,16 +10,23 @@ class CObject
     std::unordered_map<CBaseComponent *, std::string> m_pComponentList;
 
 public:
-    CObject();
+    CObject(){};
     virtual ~CObject()
     {
         Uninit();
     }
-    virtual void Init();
+    virtual void Init(){};
 
     virtual void Uninit()
     {
     }
 
-    virtual void Update();
+    virtual void Update(){};
+
+    virtual void Draw(){};
+
+    template <class T>
+    void SetComponent()
+    {
+    }
 };

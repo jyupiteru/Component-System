@@ -130,6 +130,7 @@
     <ClInclude Include="CObject\CObject.h" />
     <ClInclude Include="Components\CBaseComponent\CBaseComponent.h" />
     <ClInclude Include="ComponentPackages\CBasePackage\CBasePackages.h" />
+    <ClInclude Include="Components\CPosition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
