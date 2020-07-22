@@ -6,6 +6,6 @@
 class CPosition : public CBaseComponent
 {
 public:
-    CPosition();
-    ~CPosition();
+	CPosition() {};
+	~CPosition() {}
 };
