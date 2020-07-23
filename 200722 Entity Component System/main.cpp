@@ -5,15 +5,15 @@
 int main()
 {
 	CObject *obj = new CObject();
-	obj->SetComponent<CPosition>();
-	obj->SetComponent<CPosition>();
-	obj->SetComponent<CPosition>();
+	obj->SetComponent<CComponentPosition>();
+	obj->SetComponent<CComponentPosition>();
+	obj->SetComponent<CComponentPosition>();
 
-	obj->GetComponent<CPosition>()->x = 0;
-	printf("%f\n", obj->GetComponent<CPosition>()->x);
-	obj->GetComponent<CBaseComponent>();
-	obj->GetComponent<CPosition>()->x += 1;
-	printf("%f", obj->GetComponent<CPosition>()->x);
+	obj->GetComponent<CComponentPosition>()->x = 0;
+	printf("%f\n", obj->GetComponent<CComponentPosition>()->x);
+	obj->GetComponent<CComponentBase>();
+	obj->GetComponent<CComponentPosition>()->x =10;
+	printf("%f", obj->GetComponent<CComponentPosition>()->x);
 
 	getchar();
 }

@@ -1,12 +1,12 @@
 
-#include "CBaseComponent.h"
+#include "CComponentBase.h"
 
 #pragma once
 
-class CPosition : public CBaseComponent
+class CComponentPosition : public CComponentBase
 {
 public:
-	CPosition(){};
-	~CPosition() {}
+	CComponentPosition(){};
+	~CComponentPosition() {}
 	float x;
 };

@@ -2,16 +2,14 @@
 #include <vector>
 #include <typeinfo>
 
-#include "../ComponentPackages/CBasePackage/CBasePackages.h"
-
 //クラスの前方宣言
-class CBaseComponent;
-class CBasePackages;
+class CComponentBase;
+class CPackageBase;
 
 #pragma once
 class CObject
 {
-    std::vector<CBaseComponent *> m_pComponentList;
+    std::vector<CComponentBase *> m_pComponentList;
 
 public:
     CObject(){};

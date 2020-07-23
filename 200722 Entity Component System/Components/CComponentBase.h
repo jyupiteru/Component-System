@@ -2,7 +2,7 @@
 #include "../CObject/CObject.h"
 #pragma once
 
-class CBaseComponent
+class CComponentBase
 {
 public:
     /**
@@ -11,8 +11,8 @@ public:
      */
     int m_priority = 0;
 
-    CBaseComponent(){};
-    virtual ~CBaseComponent(){};
+    CComponentBase(){};
+    virtual ~CComponentBase(){};
 
     virtual void Init(){};
     virtual void Uninit(){};

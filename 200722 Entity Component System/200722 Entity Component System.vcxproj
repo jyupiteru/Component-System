@@ -122,13 +122,12 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="CObject\CObject.cpp" />
-    <ClCompile Include="ComponentPackages\CBasePackage\CBasePackages.cpp" />
     <ClCompile Include="main.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CObject\CObject.h" />
-    <ClInclude Include="Components\CBaseComponent.h" />
-    <ClInclude Include="ComponentPackages\CBasePackage\CBasePackages.h" />
+    <ClInclude Include="Components\CComponentBase.h" />
+    <ClInclude Include="ComponentPackages\CPackageBase.h" />
     <ClInclude Include="Components\CPosition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
