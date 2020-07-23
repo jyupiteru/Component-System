@@ -1,4 +1,5 @@
 ﻿
+#include "../CObject/CObject.h"
 #pragma once
 
 class CBaseComponent

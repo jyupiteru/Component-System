@@ -1,9 +1,12 @@
-
+﻿
 #include <vector>
 #include <typeinfo>
 
-#include "../Components/CBaseComponent/CBaseComponent.h"
 #include "../ComponentPackages/CBasePackage/CBasePackages.h"
+
+//クラスの前方宣言
+class CBaseComponent;
+class CBasePackages;
 
 #pragma once
 class CObject
@@ -27,21 +30,21 @@ public:
 
     virtual void Draw(){};
 
-	template <class T>
-	bool SetComponent()
-	{
-		T *component = new T();
-		//すでに追加されてないかの確認処理
-		for (auto i : m_pComponentList)
-		{
-			if (typeid(*i) == typeid(*component))
-			{
-				return false;
-			}
-		}
-		m_pComponentList.push_back(component);
-		component->Init();
-		return true;
+    template <class T>
+    bool SetComponent()
+    {
+        T *component = new T();
+        //すでに追加されてないかの確認処理
+        for (auto i : m_pComponentList)
+        {
+            if (typeid(*i) == typeid(*component))
+            {
+                return false;
+            }
+        }
+        m_pComponentList.push_back(component);
+        component->Init();
+        return true;
     }
 
     template <class T>
@@ -56,7 +59,7 @@ public:
         {
             if (typeid(*component) == typeid(T))
             {
-				T* com = dynamic_cast<T*>(component);
+                T *com = dynamic_cast<T *>(component);
                 return com;
             }
         }
