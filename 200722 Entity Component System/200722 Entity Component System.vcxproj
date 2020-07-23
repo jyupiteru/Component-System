@@ -126,9 +126,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="CObject\CObject.h" />
+    <ClInclude Include="ComponentPackages\CPackageTransform.h" />
+    <ClInclude Include="Components\CComponentAngle.h" />
     <ClInclude Include="Components\CComponentBase.h" />
     <ClInclude Include="ComponentPackages\CPackageBase.h" />
-    <ClInclude Include="Components\CPosition.h" />
+    <ClInclude Include="Components\CComponentPosition.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

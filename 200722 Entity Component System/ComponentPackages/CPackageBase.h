@@ -26,7 +26,7 @@ public:
     /**
      * @brief コンポーネントを全部セットする処理 継承先でセットする
      */
-    virtual void SetComponents(){};
+    virtual void SetComponents() = 0;
 
     /**
      * @brief   コンポーネントをObjectにセットするのに使う処理

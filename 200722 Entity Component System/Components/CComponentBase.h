@@ -11,6 +11,8 @@ public:
      */
     int m_priority = 0;
 
+    CObject *m_pCparent;
+
     CComponentBase(){};
     virtual ~CComponentBase(){};
 

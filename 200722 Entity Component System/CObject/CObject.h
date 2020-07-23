@@ -5,6 +5,7 @@
 //クラスの前方宣言
 class CComponentBase;
 class CPackageBase;
+class CComponentPosition;
 
 #pragma once
 class CObject
@@ -31,12 +32,14 @@ public:
     template <class T>
     bool SetComponent()
     {
+
         T *component = new T();
         //すでに追加されてないかの確認処理
         for (auto i : m_pComponentList)
         {
             if (typeid(*i) == typeid(*component))
             {
+                delete component;
                 return false;
             }
         }
@@ -48,6 +51,26 @@ public:
     template <class T>
     void SetPackage()
     {
+        T *package = new T();
+		package->SetComponents();
+		std::vector<CComponentBase *> packagelist = package->GetComponentList();
+		for (auto i :packagelist)
+		{
+			bool judge = false;
+			for (auto k :  m_pComponentList)
+			{
+				if (typeid(*i) == typeid(*k))
+				{
+					judge=false;
+					break;
+				}
+				judge = true;
+			}
+			if (judge == true)
+			{
+				m_pComponentList.push_back(i);
+			}
+		}
     }
 
     template <class T>
@@ -62,5 +85,10 @@ public:
             }
         }
         return nullptr;
+    }
+
+    std::vector<CComponentBase *> GetComponentList()
+    {
+        return m_pComponentList;
     }
 };
